@@ -2,6 +2,8 @@
 permalink: /repertoire/
 title: Repertoire
 layout: single
+author_profile: false
+
 ---
 
 # Repertoire

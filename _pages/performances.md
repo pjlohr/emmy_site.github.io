@@ -2,6 +2,8 @@
 permalink: /performances/
 title: Performances
 layout: single
+author_profile: false
+
 ---
 
 # Media

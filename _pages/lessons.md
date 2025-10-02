@@ -2,6 +2,8 @@
 permalink: /lessons/
 title: Lessons
 layout: single
+author_profile: false
+
 ---
 
 # Upcoming Performances

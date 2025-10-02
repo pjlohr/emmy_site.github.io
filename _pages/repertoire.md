@@ -1,7 +1,7 @@
 ---
 permalink: /repertoire/
 title: Repertoire
-layout: single
+layout: splash
 author_profile: false
 
 ---

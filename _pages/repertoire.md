@@ -1,6 +1,7 @@
 ---
 permalink: /repertoire/
 title: Repertoire
+layout: single
 ---
 
 # Repertoire

@@ -1,6 +1,7 @@
 ---
 permalink: /lessons/
 title: Lessons
+layout: single
 ---
 
 # Upcoming Performances

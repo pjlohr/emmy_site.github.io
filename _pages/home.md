@@ -1,5 +1,5 @@
 ---
-permalink: /home/
+permalink: /
 title: Home
 layout: splash
 title: "Hi, I’m Your Name"

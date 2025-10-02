@@ -1,19 +1,18 @@
 ---
 layout: splash
-title: "Hi, I’m Your Name"
-subtitle: "Violinist • Chamber Music • Studio"
-excerpt: "Short 1–2 sentence hook that fits in one line on mobile."
+title: "Hi, I’m Emmy!"
+excerpt: "Professional Violinist"
 header:
   overlay_color: "#000"
   overlay_filter: "0.35" # 0–1 darkens image
   overlay_image: /assets/images/hero.jpg
-  actions:
-    - label: "Listen"
-      url: /performances/
-    - label: "Repertoire"
-      url: /repertoire/
-    - label: "Book Me"
-      url: /contact/
+  # actions:
+  #   - label: "Listen"
+  #     url: /performances/
+  #   - label: "Repertoire"
+  #     url: /repertoire/
+  #   - label: "Book Me"
+  #     url: /contact/
 feature_row:
   - image_path: /assets/images/card1.jpg
     alt: "Performances"

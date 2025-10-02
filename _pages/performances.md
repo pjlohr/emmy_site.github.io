@@ -9,8 +9,6 @@ header:
   overlay_image: /assets/images/hero.jpg
 ---
 
-# Media
-
 ## Performance Videos
 <div class="video">
   <iframe width="560" height="315"

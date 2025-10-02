@@ -9,7 +9,7 @@ header:
   overlay_image: /assets/images/hero.jpg
   actions:
     - label: "Listen"
-      url: /media/
+      url: /performances/
     - label: "Repertoire"
       url: /repertoire/
     - label: "Book Me"

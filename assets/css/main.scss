@@ -12,9 +12,3 @@ search: false
 .page__hero--overlay {
   min-height: 60vh; /* default ~40–50vh — increase to show more image */
 }
-
-/* Move splash header title lower */
-.page__hero--overlay .page__hero-content {
-  justify-content: flex-end; /* moves text block to bottom */
-  padding-bottom: 20%;        /* adjust how far up from bottom */
-}

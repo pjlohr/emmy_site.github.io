@@ -3,10 +3,9 @@ layout: splash
 title: "Emmy Tisdel Lohr"
 excerpt: "Professional Violinist"
 header:
-  # overlay_color: "#000"
-  # overlay_filter: "0.2" # 0–1 darkens image
+
   overlay_image: /assets/Juan Quartet-141.jpg
-  overlay_filter: 0.5
+  overlay_filter: 0.3
   # actions:
   #   - label: "Listen"
   #     url: /performances/

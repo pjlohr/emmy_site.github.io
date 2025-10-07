@@ -1,3 +1,5 @@
-// .page__hero--overlay {
-//   min-height: 100vh;
-// }
+/* Move splash header title and excerpt lower */
+.page__hero--overlay .page__hero-content {
+  justify-content: flex-end; /* move text block to bottom of hero */
+  padding-bottom: 8%;        /* distance from bottom edge (adjust to taste) */
+}

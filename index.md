@@ -42,7 +42,7 @@ feature_row1:
     alt: "Performances"
     title: "Upcoming"
     excerpt: "Catch the next concert."
-    url: /schedule/
+    url: /performances/#upcoming-performances
     btn_label: "See dates"
     btn_class: "btn--primary"
 feature_row2:
@@ -50,7 +50,7 @@ feature_row2:
     alt: "Media"
     title: "Watch"
     excerpt: "Featured videos & recordings."
-    url: /media/
+    url: /performances/#performance-videos
     btn_label: "Play"
     btn_class: "btn--primary"
 feature_row3:
@@ -58,7 +58,7 @@ feature_row3:
     alt: "Studio"
     title: "Lessons"
     excerpt: "Private and masterclasses."
-    url: /contact/
+    url: /lessons/
     btn_label: "Get in touch"
     btn_class: "btn--primary"
 ---

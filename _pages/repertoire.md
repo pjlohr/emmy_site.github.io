@@ -1,12 +1,12 @@
 ---
 permalink: /repertoire/
 title: Repertoire
-layout: splash
+layout: simple
 author_profile: false
-header:
-  overlay_color: "#000"
-  overlay_filter: "0.35" # 0–1 darkens image
-  overlay_image: /assets/images/hero.jpg
+# header:
+#   overlay_color: "#000"
+#   overlay_filter: "0.35" # 0–1 darkens image
+#   overlay_image: /assets/images/hero.jpg
 ---
 
 # Upcoming Performances

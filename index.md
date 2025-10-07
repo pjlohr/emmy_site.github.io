@@ -3,9 +3,10 @@ layout: splash
 title: "Emmy Tisdel Lohr"
 excerpt: "Professional Violinist"
 header:
-
   overlay_image: /assets/Juan Quartet-141.jpg
   overlay_filter: 0.3
+classes: emmy-home
+
   # actions:
   #   - label: "Listen"
   #     url: /performances/

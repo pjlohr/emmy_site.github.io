@@ -8,8 +8,8 @@ search: false
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-/* Apply only to the homepage splash */
-body.page--home .page__hero--overlay {
+/* Only affects splash pages with .emmy-home class */
+.emmy-home .page__hero--overlay {
   min-height: 60vh;
 }
 

@@ -12,3 +12,23 @@ search: false
 .page__hero--overlay {
   min-height: 60vh; /* default ~40–50vh — increase to show more image */
 }
+
+/* Move splash title + excerpt to top-right */
+.page__hero--overlay .page__hero-content {
+  display: flex;                  /* make sure flex behavior is active */
+  justify-content: flex-start;    /* vertical: keep at top */
+  align-items: flex-end;          /* horizontal: move to right */
+  text-align: right;              /* align text inside the box to the right */
+  padding-top: 5%;                /* adjust vertical offset */
+  padding-right: 8%;              /* distance from right edge */
+  padding-left: 0;                /* remove default left padding */
+}
+
+/* Optional: keep centered on mobile */
+@media (max-width: 768px) {
+  .page__hero--overlay .page__hero-content {
+    align-items: center;
+    text-align: center;
+    padding-right: 0;
+  }
+}

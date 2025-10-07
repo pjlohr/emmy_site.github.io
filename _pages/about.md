@@ -12,7 +12,7 @@ author_profile: false
 <div class="about-container">
 
   <div class="about-portrait">
-    <img src="/assets/images/emmy-portrait.jpg" alt="Portrait of Emmy" />
+    <img src="/assets/Juan Quartet-062.JPEG" alt="Portrait of Emmy" />
   </div>
 
   <div class="about-text">
@@ -33,7 +33,7 @@ author_profile: false
     <p>
       📍 Based in Santa Fe, NM<br>
       ✉️ <a href="mailto:emmy@example.com">emmy@example.com</a><br>
-      🎻 <a href="/media/">Listen to my performances</a><br>
+      🎻 <a href="/performances/">Listen to my performances</a><br>
       📅 <a href="/schedule/">See upcoming concerts</a>
     </p>
   </div>

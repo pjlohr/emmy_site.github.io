@@ -1,5 +1,16 @@
-/* Move splash header title and excerpt lower */
+/* Increase height of splash header image */
+.page__hero--overlay {
+  min-height: 60vh; /* default ~40–50vh — increase to show more image */
+}
+
+/* Push splash title+excerpt lower */
 .page__hero--overlay .page__hero-content {
-  justify-content: flex-end; /* move text block to bottom of hero */
-  padding-bottom: 8%;        /* distance from bottom edge (adjust to taste) */
+  justify-content: flex-end !important;
+  padding-bottom: 8% !important;
+}
+
+/* Fallback for older theme builds */
+.page__hero--overlay .wrapper {
+  vertical-align: bottom !important;
+  padding-bottom: 8% !important;
 }

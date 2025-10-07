@@ -8,9 +8,9 @@ search: false
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-/* Increase height of splash header image */
-.page__hero--overlay {
-  min-height: 60vh; /* default ~40–50vh — increase to show more image */
+/* Apply only to the homepage splash */
+body.page--home .page__hero--overlay {
+  min-height: 60vh;
 }
 
 /* Move splash title + excerpt to top-right */

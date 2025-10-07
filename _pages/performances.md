@@ -1,7 +1,7 @@
 ---
 permalink: /performances/
 title: Performances
-layout: simple
+layout: single
 author_profile: false
 # header:
 #   overlay_color: "#000"

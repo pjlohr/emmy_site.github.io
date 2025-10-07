@@ -6,7 +6,7 @@ author_profile: false
 header:
   overlay_color: "#000"
   overlay_filter: "0.35" # 0–1 darkens image
-  overlay_image: /assets/saguaro_bw.jpg
+  overlay_image: /assets/saguaro.jpg
 ---
 
 <img src="/assets/Juan Quartet-062.JPEG" alt="Portrait of Emmy" style="max-width:350px; display:block; margin:0 auto 2rem;">

@@ -33,7 +33,7 @@ author_profile: false
     <p>
       📍 Based in Santa Fe, NM<br>
       ✉️ <a href="mailto:emmy@example.com">emmy@example.com</a><br>
-      🎻 <a href="/media/">Listen to my performances</a><br>
+      🎻 <a href="/performances/">Listen to my performances</a><br>
       📅 <a href="/schedule/">See upcoming concerts</a>
     </p>
   </div>

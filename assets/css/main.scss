@@ -32,3 +32,9 @@ search: false
     padding-right: 0;
   }
 }
+
+/* Push text slightly to the right on single-column pages */
+.about-text-narrow {
+  margin-left: 10%;   /* move right */
+  max-width: 700px;   /* optional: keep line length readable */
+}

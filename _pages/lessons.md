@@ -6,7 +6,7 @@ author_profile: false
 header:
   overlay_color: "#000"
   overlay_filter: "0.35" # 0–1 darkens image
-  overlay_image: /assets/images/hero.jpg
+  overlay_image: /assets/saguaro.jpg
 ---
 
 # Private Lessons

@@ -1,6 +1,9 @@
 ---
 layout: splash
-title: "Hi, I’m Emmy!"
+title: "
+
+
+Hi, I’m Emmy!"
 # excerpt: "Professional Violinist"
 header:
   # overlay_color: "#000"

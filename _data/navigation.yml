@@ -9,5 +9,5 @@ main:
     url: /performances/
   - title: "Lessons"
     url: /lessons/
-  - title: "Contact"
-    url: /contact/
+  # - title: "Contact"
+  #   url: /contact/

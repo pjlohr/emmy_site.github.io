@@ -3,14 +3,7 @@
   min-height: 60vh; /* default ~40–50vh — increase to show more image */
 }
 
-/* Push splash title+excerpt lower */
+// .page__hero--overlay .page__title { transform: translateY(20%); }
 .page__hero--overlay .page__hero-content {
-  justify-content: flex-end !important;
-  padding-bottom: 8% !important;
-}
-
-/* Fallback for older theme builds */
-.page__hero--overlay .wrapper {
-  vertical-align: bottom !important;
-  padding-bottom: 8% !important;
+  transform: translateY(20%); /* pushes text down while keeping flex center */
 }

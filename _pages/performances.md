@@ -8,8 +8,15 @@ author_profile: false
 #   overlay_filter: "0.35" # 0–1 darkens image
 #   overlay_image: /assets/images/hero.jpg
 ---
+## Upcoming Performances
+
+- **November 15, 2025** — Recital with Piano — Santa Fe, NM
+- **December 3, 2025** — Chamber Music Series — Los Alamos, NM
+- **January 21, 2026** — Guest Soloist with Symphony Orchestra — Albuquerque, NM
+---
 
 ## Performance Videos
+
 <div class="video">
   <iframe width="560" height="315"
     src="https://www.youtube.com/embed/VIDEO_ID_1"

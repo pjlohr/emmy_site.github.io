@@ -1,11 +1,10 @@
 ---
 layout: splash
 title: "Hi, I’m Emmy!"
-excerpt: "Professional Violinist"
+# excerpt: "Professional Violinist"
 header:
-  # image: /assets/Juan Quartet-141.jpg
-  # overlay_color: "#000"
-  # overlay_filter: "0.35" # 0–1 darkens image
+  overlay_color: "#000"
+  overlay_filter: "0.2" # 0–1 darkens image
   overlay_image: /assets/Juan Quartet-141.jpg
   # actions:
   #   - label: "Listen"

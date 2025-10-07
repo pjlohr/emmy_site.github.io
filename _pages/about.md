@@ -12,7 +12,7 @@ author_profile: false
 <div class="about-container">
 
   <div class="about-portrait">
-    <img src="/assets/Juan Quartet-062.JPEG" alt="Portrait of Emmy" width="300"/>
+    <img src="/assets/Juan Quartet-062.JPEG" alt="Portrait of Emmy" width="400"/>
   </div>
 
   <div class="about-text">

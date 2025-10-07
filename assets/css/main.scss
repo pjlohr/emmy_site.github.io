@@ -1,5 +1,14 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+/* Increase height of splash header image */
 .page__hero--overlay {
-  background-size: contain !important; /* show entire image */
-  background-repeat: no-repeat !important;
-  background-position: center center !important;
+  min-height: 80vh; /* default ~40–50vh — increase to show more image */
 }

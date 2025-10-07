@@ -3,10 +3,10 @@ layout: splash
 title: "About Me"
 permalink: /about/
 author_profile: false
-<!-- header:
+header:
   overlay_color: "#000"
-  overlay_filter: "0.25"
-  overlay_image: /assets/images/portrait-bg.jpg  # optional soft background image -->
+  overlay_filter: "0.35" # 0–1 darkens image
+  overlay_image: /assets/joshua.jpg
 ---
 
 <div class="about-container">

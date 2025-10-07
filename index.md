@@ -37,7 +37,7 @@ header:
 #     btn_class: "btn--primary"
 
 feature_row1:
-  - image_path: /assets/images/card1.jpg
+  - image_path: /assets/images/606-536x354.jpg
     alt: "Performances"
     title: "Upcoming"
     excerpt: "Catch the next concert."
@@ -45,7 +45,7 @@ feature_row1:
     btn_label: "See dates"
     btn_class: "btn--primary"
 feature_row2:
-  - image_path: /assets/images/card2.jpg
+  - image_path: /assets/images/606-536x354.jpg
     alt: "Media"
     title: "Watch"
     excerpt: "Featured videos & recordings."
@@ -53,7 +53,7 @@ feature_row2:
     btn_label: "Play"
     btn_class: "btn--primary"
 feature_row3:
-  - image_path: /assets/images/card3.jpg
+  - image_path: /assets/images/606-536x354.jpg
     alt: "Studio"
     title: "Lessons"
     excerpt: "Private and masterclasses."

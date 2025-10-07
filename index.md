@@ -13,7 +13,30 @@ header:
   #     url: /repertoire/
   #   - label: "Book Me"
   #     url: /contact/
-feature_row:
+# feature_row:
+#   - image_path: /assets/images/card1.jpg
+#     alt: "Performances"
+#     title: "Upcoming"
+#     excerpt: "Catch the next concert."
+#     url: /schedule/
+#     btn_label: "See dates"
+#     btn_class: "btn--primary"
+#   - image_path: /assets/images/card2.jpg
+#     alt: "Media"
+#     title: "Watch"
+#     excerpt: "Featured videos & recordings."
+#     url: /media/
+#     btn_label: "Play"
+#     btn_class: "btn--primary"
+#   - image_path: /assets/images/card3.jpg
+#     alt: "Studio"
+#     title: "Lessons"
+#     excerpt: "Private and masterclasses."
+#     url: /contact/
+#     btn_label: "Get in touch"
+#     btn_class: "btn--primary"
+
+feature_row1:
   - image_path: /assets/images/card1.jpg
     alt: "Performances"
     title: "Upcoming"
@@ -21,6 +44,7 @@ feature_row:
     url: /schedule/
     btn_label: "See dates"
     btn_class: "btn--primary"
+feature_row2:
   - image_path: /assets/images/card2.jpg
     alt: "Media"
     title: "Watch"
@@ -28,6 +52,7 @@ feature_row:
     url: /media/
     btn_label: "Play"
     btn_class: "btn--primary"
+feature_row3:
   - image_path: /assets/images/card3.jpg
     alt: "Studio"
     title: "Lessons"
@@ -38,4 +63,10 @@ feature_row:
 ---
 Welcome! Keep this paragraph to 2–3 sentences. Link to your key pages and a single call-to-action.
 
-{% include feature_row %}
+<!-- {% include feature_row %} -->
+
+{% include feature_row id="feature_row1" type="left" %}
+
+{% include feature_row id="feature_row2" type="right" %}
+
+{% include feature_row id="feature_row3" type="left" %}

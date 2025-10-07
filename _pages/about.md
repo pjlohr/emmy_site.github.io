@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "About Emmy"
+title: "About Me"
 permalink: /about/
 author_profile: false
 <!-- header:
@@ -12,7 +12,7 @@ author_profile: false
 <div class="about-container">
 
   <div class="about-portrait">
-    <img src="/assets/Juan Quartet-062.JPEG" alt="Portrait of Emmy" />
+    <img src="/assets/Juan Quartet-062.JPEG" alt="Portrait of Emmy" width="300"/>
   </div>
 
   <div class="about-text">

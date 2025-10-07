@@ -5,7 +5,7 @@ excerpt: "Professional Violinist"
 header:
   overlay_color: "#000"
   overlay_filter: "0.35" # 0–1 darkens image
-  overlay_image: /assets/images/hero.jpg
+  overlay_image: /assets/Juan Quartet-141.jpg
   # actions:
   #   - label: "Listen"
   #     url: /performances/

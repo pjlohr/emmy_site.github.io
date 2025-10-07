@@ -1,10 +1,7 @@
 ---
 layout: splash
-title: "
-
-
-Hi, I’m Emmy!"
-# excerpt: "Professional Violinist"
+title: "Emmy Tisdel Lohr"
+excerpt: "Professional Violinist"
 header:
   # overlay_color: "#000"
   # overlay_filter: "0.2" # 0–1 darkens image

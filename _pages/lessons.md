@@ -11,14 +11,14 @@ header:
 
 # Private Lessons
 
-Welcome to my private studio! I am currently offering lessons for both violin and viola, ages 10 and up. 
+Welcome to my private studio! I am currently offering lessons for **both violin and viola, ages 10 and up**. 
 
 # Teaching Philosophy
 
 My teaching philosophy centers around the belief that musical instruction should be individually tailored to the student, their needs, and aspirations.I strive to arm my students with the tools to become not just great musicians, but also  great thinkers and lifelong learners.  As a teacher, one of my primary objectives is to help each student find their own musical voice and what they are most passionate about. 
 
 # Policies
- 
+
 All students receive weekly individual lessons with personalized instruction. Lessons can be scheduled for 30-, 45-, or 60-minute slots depending on the age and needs of the student. For additional policies and pricing please see the link below!
 
 <!-- - **Scheduling:** Lessons are scheduled on a weekly basis. Please notify us at least 24 hours in advance for any cancellations or rescheduling.
@@ -28,7 +28,7 @@ All students receive weekly individual lessons with personalized instruction. Le
 
 <!-- [📄 Download PDF]( /assets/files/Tisdel_Lohr_Studio_Policies.pdf ){:target="_blank"} -->
 
-Click below to download:
+**Click the link below to download a copy of my studio policies:**
 
 <a href="/assets/files/Tisdel_Lohr_Studio_Policies.pdf" download>
   📥 Download Studio Policies (PDF)

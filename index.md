@@ -62,12 +62,12 @@ feature_row3:
     btn_label: "Get in touch"
     btn_class: "btn--primary"
 ---
-Welcome! Keep this paragraph to 2–3 sentences. Link to your key pages and a single call-to-action.
+<!-- Welcome! Keep this paragraph to 2–3 sentences. Link to your key pages and a single call-to-action. -->
 
-<!-- {% include feature_row %} -->
-
+{% include feature_row %}
+<!-- 
 {% include feature_row id="feature_row1" type="left" %}
 
 {% include feature_row id="feature_row2" type="right" %}
 
-{% include feature_row id="feature_row3" type="left" %}
+{% include feature_row id="feature_row3" type="left" %} -->

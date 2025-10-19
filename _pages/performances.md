@@ -9,7 +9,7 @@ header:
   overlay_image: /assets/joshua.jpg
 ---
 
-# Performance Videos
+# Previous Performances
 
 ## Vivaldi Four Seasons: Autumn. Recorded with Washington Island Music Festival.
 

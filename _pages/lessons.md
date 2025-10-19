@@ -36,14 +36,16 @@ For a full and up-to-date schedule, please contact the teacher directly.
 
 # Contact
 
-Ready to start your musical journey? Please reach out to schedule your first lesson or ask any questions.
+
+
+<!-- Ready to start your musical journey? Please reach out to schedule your first lesson or ask any questions.
 
 **Email:** teacher@example.com  
-**Phone:** (123) 456-7890
+**Phone:** (123) 456-7890 -->
 
 ---
 
-## Calendar
+<!-- ## Calendar
 
 To view the full lesson schedule, please see the calendar below:
 
@@ -51,4 +53,4 @@ To view the full lesson schedule, please see the calendar below:
   src="https://calendar.google.com/calendar/embed?src=YOUR_PUBLIC_CALENDAR_ID&mode=AGENDA"
   style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"
   loading="lazy">
-</iframe>
+</iframe> -->

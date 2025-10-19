@@ -21,7 +21,7 @@ header:
 ### Vivaldi Four Seasons: Autumn. Recorded with Washington Island Music Festival.
 <div class="video">
   <iframe width="560" height="315"
-    src="https://youtu.be/AkFKmHDLHT4"
+    src="https://www.youtube.com/embed/AkFKmHDLHT4"
     title="Vivaldi Four Seasons: Autumn."
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -32,7 +32,7 @@ header:
 ### Beethoven "Kreutzer" Sonata, Movements 2 and 3, with pianist Stefanie Jacob.
 <div class="video">
   <iframe width="560" height="315"
-    src="https://youtu.be/3VZThRR-5AY"
+    src="https://www.youtube.com/embed/3VZThRR-5AY"
     title="Beethoven Kreutzer Sonata"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -43,7 +43,7 @@ header:
 ### Haydn: String Quartet in D Major, op. 76 no. 5 with Music Masters Course Japan.
 <div class="video">
   <iframe width="560" height="315"
-    src="https://www.youtube.com/watch?v=fzDL22B0Rz4"
+    src="https://www.youtube.com/embed/fzDL22B0Rz4""
     title="Haydn MMCJ"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -54,7 +54,7 @@ header:
 ### Grieg:Holberg Suite, with Austin Camerata.
 <div class="video">
   <iframe width="560" height="315"
-    src="https://www.youtube.com/watch?v=IxIw1f8xrsk"
+    src="https://www.youtube.com/embed/IxIw1f8xrsk"
     title="Tchaikovsky Concerto — Excerpt"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

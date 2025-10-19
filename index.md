@@ -37,7 +37,32 @@ classes: emmy-home
 #     btn_label: "Get in touch"
 #     btn_class: "btn--primary"
 
-feature_row1:
+# feature_row1:
+#   - image_path: /assets/images/606-536x354.jpg
+#     alt: "Performances"
+#     title: "Upcoming"
+#     excerpt: "Catch the next concert."
+#     url: /concerts/
+#     btn_label: "See dates"
+#     btn_class: "btn--primary"
+# feature_row2:
+#   - image_path: /assets/images/606-536x354.jpg
+#     alt: "Media"
+#     title: "Watch"
+#     excerpt: "Featured videos & recordings."
+#     url: /media/#performance-videos
+#     btn_label: "Play"
+#     btn_class: "btn--primary"
+# feature_row3:
+#   - image_path: /assets/images/606-536x354.jpg
+#     alt: "Studio"
+#     title: "Lessons"
+#     excerpt: "Violin and viola, ages 10 and up."
+#     url: /lessons/
+#     btn_label: "Get in touch"
+#     btn_class: "btn--primary"
+
+feature_row:
   - image_path: /assets/images/606-536x354.jpg
     alt: "Performances"
     title: "Upcoming"
@@ -45,7 +70,6 @@ feature_row1:
     url: /concerts/
     btn_label: "See dates"
     btn_class: "btn--primary"
-feature_row2:
   - image_path: /assets/images/606-536x354.jpg
     alt: "Media"
     title: "Watch"
@@ -53,7 +77,6 @@ feature_row2:
     url: /media/#performance-videos
     btn_label: "Play"
     btn_class: "btn--primary"
-feature_row3:
   - image_path: /assets/images/606-536x354.jpg
     alt: "Studio"
     title: "Lessons"
@@ -65,6 +88,7 @@ feature_row3:
 <!-- Welcome! Keep this paragraph to 2–3 sentences. Link to your key pages and a single call-to-action. -->
 
 {% include feature_row %}
+
 <!-- 
 {% include feature_row id="feature_row1" type="left" %}
 

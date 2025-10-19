@@ -24,6 +24,14 @@ Our teaching philosophy centers on fostering a supportive and inspiring environm
 - **Make-up Lessons:** Make-up lessons are available only if the teacher cancels or with prior arrangement.
 - **Materials:** Students are responsible for purchasing their own books and materials as recommended.
 
+<!-- [📄 Download PDF]( /assets/files/Tisdel_Lohr_Studio_Policies.pdf ){:target="_blank"} -->
+
+Click below to download:
+
+<a href="/assets/files/Tisdel_Lohr_Studio_Policies.pdf" download>
+  📥 Download Studio Policies (PDF)
+</a>
+
 # Sample Schedule
 
 | Day       | Time          | Student Level     |

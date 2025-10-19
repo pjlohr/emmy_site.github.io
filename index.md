@@ -42,7 +42,7 @@ feature_row1:
     alt: "Performances"
     title: "Upcoming"
     excerpt: "Catch the next concert."
-    url: /performances/#upcoming-performances
+    url: /concerts/
     btn_label: "See dates"
     btn_class: "btn--primary"
 feature_row2:
@@ -50,14 +50,14 @@ feature_row2:
     alt: "Media"
     title: "Watch"
     excerpt: "Featured videos & recordings."
-    url: /performances/#performance-videos
+    url: /media/#performance-videos
     btn_label: "Play"
     btn_class: "btn--primary"
 feature_row3:
   - image_path: /assets/images/606-536x354.jpg
     alt: "Studio"
     title: "Lessons"
-    excerpt: "Private and masterclasses."
+    excerpt: "Violin and viola, ages 10 and up."
     url: /lessons/
     btn_label: "Get in touch"
     btn_class: "btn--primary"

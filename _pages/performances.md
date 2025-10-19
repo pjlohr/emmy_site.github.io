@@ -1,6 +1,6 @@
 ---
-permalink: /performances/
-title: Performances
+permalink: /media/
+title: Media
 layout: splash
 author_profile: false
 header:
@@ -8,12 +8,6 @@ header:
   overlay_filter: "0.35" # 0–1 darkens image
   overlay_image: /assets/joshua.jpg
 ---
-# Upcoming Performances
-## Check back soon!
-<!-- - **November 15, 2025** — Recital with Piano — Santa Fe, NM
-- **December 3, 2025** — Chamber Music Series — Los Alamos, NM
-- **January 21, 2026** — Guest Soloist with Symphony Orchestra — Albuquerque, NM -->
-<!-- --- -->
 
 # Performance Videos
 

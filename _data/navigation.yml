@@ -3,10 +3,10 @@ main:
     url: /
   - title: "About"
     url: /about/
-  # - title: "Repertoire"
-  #   url: /repertoire/
-  - title: "Performances"
-    url: /performances/
+  - title: "Concerts"
+    url: /concerts/
+  - title: "Media"
+    url: /media/
   - title: "Lessons"
     url: /lessons/
   # - title: "Contact"

@@ -44,7 +44,21 @@ For a full and up-to-date schedule, please contact the teacher directly.
 
 # Contact
 
+Have a question or want to schedule a lesson? Send me a message below:
 
+<form action="https://formspree.io/f/xjkazegy" method="POST">
+
+  <label for="name">Name</label><br>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <label for="email">Email</label><br>
+  <input type="email" id="email" name="_replyto" required><br><br>
+
+  <label for="message">Message</label><br>
+  <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+  <button type="submit">Send Message</button>
+</form>
 
 <!-- Ready to start your musical journey? Please reach out to schedule your first lesson or ask any questions.
 

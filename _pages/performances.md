@@ -8,17 +8,17 @@ header:
   overlay_filter: "0.35" # 0–1 darkens image
   overlay_image: /assets/joshua.jpg
 ---
-## Upcoming Performances
-
-### Check back soon!
+# Upcoming Performances
+## Check back soon!
 <!-- - **November 15, 2025** — Recital with Piano — Santa Fe, NM
 - **December 3, 2025** — Chamber Music Series — Los Alamos, NM
 - **January 21, 2026** — Guest Soloist with Symphony Orchestra — Albuquerque, NM -->
----
+<!-- --- -->
 
-## Performance Videos
+# Performance Videos
 
-### Vivaldi Four Seasons: Autumn. Recorded with Washington Island Music Festival.
+## Vivaldi Four Seasons: Autumn. Recorded with Washington Island Music Festival.
+
 <div class="video">
   <iframe width="560" height="315"
     src="https://www.youtube.com/embed/AkFKmHDLHT4"
@@ -29,7 +29,8 @@ header:
   </iframe>
 </div>
 
-### Beethoven "Kreutzer" Sonata, Movements 2 and 3, with pianist Stefanie Jacob.
+## Beethoven "Kreutzer" Sonata, Movements 2 and 3, with pianist Stefanie Jacob.
+
 <div class="video">
   <iframe width="560" height="315"
     src="https://www.youtube.com/embed/3VZThRR-5AY"
@@ -40,7 +41,8 @@ header:
   </iframe>
 </div>
 
-### Haydn: String Quartet in D Major, op. 76 no. 5 with Music Masters Course Japan.
+## Haydn: String Quartet in D Major, op. 76 no. 5 with Music Masters Course Japan.
+
 <div class="video">
   <iframe width="560" height="315"
     src="https://www.youtube.com/embed/fzDL22B0Rz4"
@@ -51,7 +53,8 @@ header:
   </iframe>
 </div>
 
-### Grieg:Holberg Suite, with Austin Camerata.
+## Grieg:Holberg Suite, with Austin Camerata.
+
 <div class="video">
   <iframe width="560" height="315"
     src="https://www.youtube.com/embed/IxIw1f8xrsk"

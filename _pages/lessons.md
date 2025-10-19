@@ -11,11 +11,11 @@ header:
 
 # Private Lessons
 
-Welcome to our private lessons program. Whether you are a beginner or an advanced student, our personalized instruction is designed to help you reach your musical goals. Lessons are tailored to your individual needs and interests.
+Welcome to my private studio! I am currently offering lessons for both violin and viola, ages 10 and up. 
 
-# Studio Philosophy
+# Teaching Philosophy
 
-Our teaching philosophy centers on fostering a supportive and inspiring environment. We believe in nurturing creativity, building strong fundamentals, and encouraging consistent practice. Every student is unique, and we strive to adapt our methods to best suit each learner.
+My teaching philosophy centers around the belief that musical instruction should be individually tailored to the student, their needs, and aspirations.I strive to arm my students with the tools to become not just great musicians, but also  great thinkers and lifelong learners.  As a teacher, one of my primary objectives is to help each student find their own musical voice and what they are most passionate about. 
 
 # Policies
 
@@ -31,16 +31,6 @@ Click below to download:
 <a href="/assets/files/Tisdel_Lohr_Studio_Policies.pdf" download>
   📥 Download Studio Policies (PDF)
 </a>
-
-# Sample Schedule
-
-| Day       | Time          | Student Level     |
-|-----------|---------------|-------------------|
-| Monday    | 4:00 PM - 6:00 PM | Beginner to Intermediate |
-| Wednesday | 3:30 PM - 5:30 PM | Intermediate to Advanced |
-| Friday    | 4:00 PM - 7:00 PM | All Levels         |
-
-For a full and up-to-date schedule, please contact the teacher directly.
 
 # Contact
 

@@ -49,8 +49,7 @@ feature_row:
 
 # Upcoming Concerts
 
-{% include feature_row %}
-
+<!-- {% include feature_row %} -->
 <div id="concert-row">
   {% include feature_row %}
 </div>
@@ -105,8 +104,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Badge container styles (calendar card)
     const b = badge.style;
     b.position = 'absolute';
-    b.top = '10px';
-    b.right = '10px';
+    b.top = '5px';
+    b.right = '5px';
     b.width = '58px';
     b.height = '64px';
     b.borderRadius = '10px';
@@ -158,35 +157,3 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
-
-<!-- <script>
-document.addEventListener('DOMContentLoaded', function () {
-  // Build an array of date objects (or null) from front matter
-  const dates = [
-    {% for f in page.feature_row %}
-      {% if f.badge_date %}
-        { month: "{{ f.badge_date | date: '%b' | upcase }}", day: "{{ f.badge_date | date: '%-d' }}" },
-      {% elsif f.badge_month or f.badge_day %}
-        { month: "{{ f.badge_month }}", day: "{{ f.badge_day }}" },
-      {% else %}
-        null,
-      {% endif %}
-    {% endfor %}
-  ];
-
-  // Find each feature tile's teaser image container and inject the badge
-  const teasers = document.querySelectorAll('.feature__item .archive__item-teaser');
-  teasers.forEach(function (teaser, i) {
-    const d = dates[i];
-    if (!d || !d.month || !d.day) return;
-
-    const badge = document.createElement('span');
-    badge.className = 'mm-calendar-badge';
-    badge.innerHTML = '<span class="mm-cal-header">' + d.month + '</span>' +
-                      '<span class="mm-cal-day">' + d.day + '</span>';
-    // Ensure anchoring and add to DOM
-    teaser.style.position = 'relative';
-    teaser.appendChild(badge);
-  });
-});
-</script> -->

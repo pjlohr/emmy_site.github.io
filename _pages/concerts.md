@@ -42,6 +42,25 @@ feature_row:
     btn_class: "btn--primary"
 ---
 
+<style>
+/* Calendar icon overlay for Minimal Mistakes feature_row teaser images (page-local) */
+.feature__item .archive__item-teaser {
+  position: relative;
+}
+.feature__item .archive__item-teaser::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  z-index: 2;
+  /* Inline SVG calendar icon (white) with subtle shadow */
+  background: no-repeat center/contain
+    url("data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'&gt;&lt;defs&gt;&lt;filter id='s' x='-50%' y='-50%' width='200%' height='200%'&gt;&lt;feDropShadow dx='0' dy='1' stdDeviation='1' flood-color='black' flood-opacity='.35'/&gt;&lt;/filter&gt;&lt;/defs&gt;&lt;g filter='url(#s)' fill='%23ffffff' stroke='%23000000' stroke-width='0'&gt;&lt;rect x='3' y='4' width='18' height='17' rx='2' ry='2' fill='%23ffffff' /&gt;&lt;rect x='3' y='8' width='18' height='13' fill='%23ffffff' /&gt;&lt;rect x='7' y='2' width='2' height='4' fill='%23e63946'/&gt;&lt;rect x='15' y='2' width='2' height='4' fill='%23e63946'/&gt;&lt;rect x='3' y='6' width='18' height='3' fill='%23e63946'/&gt;&lt;/g&gt;&lt;/svg&gt;");
+}
+</style>
+
 # Upcoming Concerts
 
 {% include feature_row %}

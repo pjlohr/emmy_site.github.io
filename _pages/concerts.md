@@ -13,15 +13,15 @@ feature_row:
     # alt: "Performances"
     title: "Violins of Hope with Jewish Museum Milwaukee"
     excerpt: |
-      Works by Bloch, Shostakovich, Schoenfield, and others  
-      Stefanie Jacob, piano
-      Scott Tisdel, cello
-      Emmy Tisdel Lohr, violin
+          Works by Bloch, Shostakovich, Schoenfield, and others  
+          Stefanie Jacob, piano  
+          Scott Tisdel, cello  
+          Emmy Tisdel Lohr, violin 
     url: https://jewishmuseummilwaukee.org/event/nashama/
     btn_label: "Tickets / More Info"
     btn_class: "btn--primary"
 
-  - image_path: /assets/concert_images/candlelight.jpeg
+  - image_path: /assets/concert_images/candlelight.jpg
     # alt: "Media"
     title: "Candlelight Concert"
     excerpt: "Rock Classics (Santa Fe)"
@@ -29,7 +29,7 @@ feature_row:
     btn_label: "Tickets / More Info"
     btn_class: "btn--primary"
 
-  - image_path: /assets/concert_images/candlelight.jpeg
+  - image_path: /assets/concert_images/candlelight.jpg
     # alt: "Studio"
     title: "Candlelight Concert"
     excerpt: "Coldplay x Imagine Dragons (Santa Fe)"
@@ -40,8 +40,18 @@ feature_row:
 
 # Upcoming Concerts
 
-<!-- Check back soon! -->
 {% include feature_row %}
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- <div class="image-container">
   <img src="/assets/images/606-536x354.jpg" alt="Event Poster">

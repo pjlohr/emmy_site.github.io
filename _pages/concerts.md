@@ -18,7 +18,7 @@ feature_row:
     alt: "Performances"
     title: "Upcoming Concerts"
     excerpt: "Catch the next performance!"
-    <!-- url: /concerts/ -->
+    url: /concerts/
     btn_label: "Tickets / More Info"
     btn_class: "btn--primary"
   - image_path: /assets/joshua.jpg
@@ -32,7 +32,7 @@ feature_row:
     alt: "Studio"
     title: "Private Lessons"
     excerpt: "Violin and viola, ages 10 and up."
-    <!-- url: /lessons/ -->
+    url: /lessons/
     btn_label: "Tickets / More Info"
     btn_class: "btn--primary"
 ---
@@ -46,3 +46,27 @@ feature_row:
     <i class="fa fa-calendar"></i> Oct 31 2025
   </div>
 </div>
+
+<div class="relative inline-block">
+  <img src="/assets/images/606-536x354.jpg" alt="Event" class="rounded-xl w-full">
+  <div class="absolute top-2 right-2 bg-black/70 text-white px-3 py-1 rounded-lg flex items-center gap-2 text-sm">
+    <i class="fa-solid fa-calendar-days"></i> Oct 31 2025
+  </div>
+</div>
+
+---
+layout: default
+title: Halloween Concert
+---
+
+# 🎃 Halloween Concert
+
+<div class="image-card">
+  <img src="/assets/images/606-536x354.jpg" alt="Event Poster">
+  <div class="calendar-badge">
+    <div class="calendar-header">OCT</div>
+    <div class="calendar-body">31</div>
+  </div>
+</div>
+
+Join us for a spooky evening of music and magic in Santa Fe!

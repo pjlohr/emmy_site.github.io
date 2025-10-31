@@ -47,70 +47,38 @@ feature_row:
     badge_date: 2025-12-12
 ---
 
-<style>
-/* Calendar badge that overlays the teaser image in each feature tile */
-.feature__item .archive__item-teaser {
-  position: relative; /* anchor for absolute badge */
-}
-
-.mm-calendar-badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 58px;
-  height: 64px;
-  border-radius: 10px;
-  overflow: hidden;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: stretch;
-  box-shadow: 0 2px 6px rgba(0,0,0,.28);
-  z-index: 3;
-}
-
-/* Red header with month */
-.mm-cal-header {
-  background: #e63946;     /* adjust to your brand */
-  color: #fff;
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: .5px;
-  text-transform: uppercase;
-  line-height: 1;
-  padding: 6px 0 6px;
-  text-align: center;
-}
-
-/* White body with day number */
-.mm-cal-day {
-  background: #fff;
-  color: #111;
-  font-weight: 800;
-  font-size: 22px;
-  line-height: 1;
-  flex: 1 1 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Optional: subtle border for dark images */
-.mm-calendar-badge {
-  border: 1px solid rgba(255,255,255,.35);
-}
-
-/* Optional: smaller badge on narrow screens */
-@media (max-width: 480px) {
-  .mm-calendar-badge { width: 50px; height: 58px; }
-  .mm-cal-header { font-size: 11px; padding: 5px 0; }
-  .mm-cal-day { font-size: 20px; }
-}
-</style>
-
 # Upcoming Concerts
 
 {% include feature_row %}
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Build an array of date objects (or null) from front matter
+  const dates = [
+    {% for f in page.feature_row %}
+      {% if f.badge_date %}
+        { month: "{{ f.badge_date | date: '%b' | upcase }}", day: "{{ f.badge_date | date: '%-d' }}" },
+      {% elsif f.badge_month or f.badge_day %}
+        { month: "{{ f.badge_month }}", day: "{{ f.badge_day }}" },
+      {% else %}
+        null,
+      {% endif %}
+    {% endfor %}
+  ];
 
+  // Find each feature tile's teaser image container and inject the badge
+  const teasers = document.querySelectorAll('.feature__item .archive__item-teaser');
+  teasers.forEach(function (teaser, i) {
+    const d = dates[i];
+    if (!d || !d.month || !d.day) return;
 
+    const badge = document.createElement('span');
+    badge.className = 'mm-calendar-badge';
+    badge.innerHTML = '<span class="mm-cal-header">' + d.month + '</span>' +
+                      '<span class="mm-cal-day">' + d.day + '</span>';
+    // Ensure anchoring and add to DOM
+    teaser.style.position = 'relative';
+    teaser.appendChild(badge);
+  });
+});
+</script>

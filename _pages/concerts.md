@@ -8,7 +8,7 @@ header:
   overlay_filter: "0.35" # 0–1 darkens image
   overlay_image: /assets/sandstone.jpg
 
-feature_row:
+feature_row1:
   - image_path: /assets/concert_images/violins_of_hope.jpg
     # alt: "Performances"
     title: "Violins of Hope with Jewish Museum Milwaukee"
@@ -51,7 +51,7 @@ feature_row:
 
 <!-- {% include feature_row %} -->
 <div id="concert-row">
-  {% include feature_row %}
+  {% include feature_row1 %}
 </div>
 
 <script>
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Badge container styles (calendar card)
     const b = badge.style;
     b.position = 'absolute';
-    b.top = '5px';
+    b.top = '0';
     b.right = '5px';
     b.width = '58px';
     b.height = '64px';

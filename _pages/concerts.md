@@ -20,6 +20,8 @@ feature_row:
     url: https://jewishmuseummilwaukee.org/event/nashama/
     btn_label: "Tickets / More Info"
     btn_class: "btn--primary"
+    badge_date: 2025-11-03   # ← ISO date (auto-formats to NOV / 3)
+
 
   - image_path: /assets/concert_images/candlelight.jpg
     # alt: "Media"
@@ -30,6 +32,8 @@ feature_row:
     url: https://feverup.com/m/369543
     btn_label: "Tickets / More Info"
     btn_class: "btn--primary"
+    badge_month: OCT          # ← manual
+    badge_day: 31
 
   - image_path: /assets/concert_images/candlelight.jpg
     # alt: "Studio"
@@ -40,24 +44,67 @@ feature_row:
     url: https://feverup.com/m/369545
     btn_label: "Tickets / More Info"
     btn_class: "btn--primary"
+    badge_date: 2025-12-12
 ---
 
 <style>
-/* Calendar icon overlay for Minimal Mistakes feature_row teaser images (page-local) */
+/* Calendar badge that overlays the teaser image in each feature tile */
 .feature__item .archive__item-teaser {
-  position: relative;
+  position: relative; /* anchor for absolute badge */
 }
-.feature__item .archive__item-teaser::after {
-  content: "";
+
+.mm-calendar-badge {
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 28px;
-  height: 28px;
-  z-index: 2;
-  /* Inline SVG calendar icon (white) with subtle shadow */
-  background: no-repeat center/contain
-    url("data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'&gt;&lt;defs&gt;&lt;filter id='s' x='-50%' y='-50%' width='200%' height='200%'&gt;&lt;feDropShadow dx='0' dy='1' stdDeviation='1' flood-color='black' flood-opacity='.35'/&gt;&lt;/filter&gt;&lt;/defs&gt;&lt;g filter='url(#s)' fill='%23ffffff' stroke='%23000000' stroke-width='0'&gt;&lt;rect x='3' y='4' width='18' height='17' rx='2' ry='2' fill='%23ffffff' /&gt;&lt;rect x='3' y='8' width='18' height='13' fill='%23ffffff' /&gt;&lt;rect x='7' y='2' width='2' height='4' fill='%23e63946'/&gt;&lt;rect x='15' y='2' width='2' height='4' fill='%23e63946'/&gt;&lt;rect x='3' y='6' width='18' height='3' fill='%23e63946'/&gt;&lt;/g&gt;&lt;/svg&gt;");
+  width: 58px;
+  height: 64px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  box-shadow: 0 2px 6px rgba(0,0,0,.28);
+  z-index: 3;
+}
+
+/* Red header with month */
+.mm-cal-header {
+  background: #e63946;     /* adjust to your brand */
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 6px 0 6px;
+  text-align: center;
+}
+
+/* White body with day number */
+.mm-cal-day {
+  background: #fff;
+  color: #111;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 1;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional: subtle border for dark images */
+.mm-calendar-badge {
+  border: 1px solid rgba(255,255,255,.35);
+}
+
+/* Optional: smaller badge on narrow screens */
+@media (max-width: 480px) {
+  .mm-calendar-badge { width: 50px; height: 58px; }
+  .mm-cal-header { font-size: 11px; padding: 5px 0; }
+  .mm-cal-day { font-size: 20px; }
 }
 </style>
 
@@ -67,39 +114,3 @@ feature_row:
 
 
 
-
-
-
-
-
-
-
-
-
-<!-- <div class="image-container">
-  <img src="/assets/images/606-536x354.jpg" alt="Event Poster">
-  <div class="date-badge">
-    <i class="fa fa-calendar"></i> Oct 31 2025
-  </div>
-</div>
-
-<div class="relative inline-block">
-  <img src="/assets/images/606-536x354.jpg" alt="Event" class="rounded-xl w-full">
-  <div class="absolute top-2 right-2 bg-black/70 text-white px-3 py-1 rounded-lg flex items-center gap-2 text-sm">
-    <i class="fa-solid fa-calendar-days"></i> Oct 31 2025
-  </div>
-</div> -->
-
-
-
-<!-- # 🎃 Halloween Concert
-
-<div class="image-card">
-  <img src="/assets/images/606-536x354.jpg" alt="Event Poster">
-  <div class="calendar-badge">
-    <div class="calendar-header">OCT</div>
-    <div class="calendar-body">31</div>
-  </div>
-</div>
-
-Join us for a spooky evening of music and magic in Santa Fe! -->

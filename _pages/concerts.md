@@ -25,10 +25,10 @@ feature_row_a:
 
   - image_path: /assets/concert_images/candlelight.jpg
     # alt: "Media"
-    title: "Candlelight Concert"
-    excerpt: |
-      Rock Classics  
-      Santa Fe 
+    title: |
+      Candlelight Concert:
+      Rock Classics
+    excerpt: "Santa Fe"
     url: https://feverup.com/m/369543
     btn_label: "Tickets / More Info"
     btn_class: "btn--primary"
@@ -37,10 +37,10 @@ feature_row_a:
 
   - image_path: /assets/concert_images/candlelight.jpg
     # alt: "Studio"
-    title: "Candlelight Concert"
-    excerpt: |
+    title: |
+      Candlelight Concert:
       Coldplay x Imagine Dragons  
-      Santa Fe 
+    excerpt: "Santa Fe"
     url: https://feverup.com/m/369545
     btn_label: "Tickets / More Info"
     btn_class: "btn--primary"
@@ -48,14 +48,43 @@ feature_row_a:
     badge_day: 22
 
 # Row B
-# feature_row_b:
-#   - image_path: "{{ '/assets/concert_images/candlelight.jpg' | relative_url }}"
-#     title: "Candlelight: Coldplay x Imagine Dragons"
-#     excerpt: "Santa Fe"
-#     url: https://example.com/c
-#     btn_label: "Tickets"
-#     btn_class: "btn--primary"
-#     badge_date: 2025-12-12
+feature_row_b:
+  # - image_path: /assets/concert_images/violins_of_hope.jpg
+  #   # alt: "Performances"
+  #   title: "Violins of Hope with Jewish Museum Milwaukee"
+  #   excerpt: |
+  #         Works by Bloch, Shostakovich, Schoenfield, and others  
+  #         Stefanie Jacob, piano  
+  #         Scott Tisdel, cello  
+  #         Emmy Tisdel Lohr, violin 
+  #   url: https://jewishmuseummilwaukee.org/event/nashama/
+  #   btn_label: "Tickets / More Info"
+  #   btn_class: "btn--primary"
+  #   badge_date: 2025-11-04   # ← ISO date (auto-formats to NOV / 3)
+
+  # - image_path: /assets/concert_images/candlelight.jpg
+  #   # alt: "Media"
+  #   title: "Candlelight Concert"
+  #   excerpt: |
+  #     Rock Classics  
+  #     Santa Fe 
+  #   url: https://feverup.com/m/369543
+  #   btn_label: "Tickets / More Info"
+  #   btn_class: "btn--primary"
+  #   badge_month: NOV          # ← manual
+  #   badge_day: 22
+
+  # - image_path: /assets/concert_images/candlelight.jpg
+  #   # alt: "Studio"
+  #   title: "Candlelight Concert"
+  #   excerpt: |
+  #     Coldplay x Imagine Dragons  
+  #     Santa Fe 
+  #   url: https://feverup.com/m/369545
+  #   btn_label: "Tickets / More Info"
+  #   btn_class: "btn--primary"
+  #   badge_month: NOV          # ← manual
+  #   badge_day: 22
 ---
 
 # Upcoming Concerts

@@ -26,8 +26,8 @@ feature_row_a:
   - image_path: /assets/concert_images/candlelight.jpg
     # alt: "Media"
     title: |
-      Candlelight Concert:
-      Rock Classics
+      Candlelight Concert:  
+      Rock Classics 
     excerpt: "Santa Fe"
     url: https://feverup.com/m/369543
     btn_label: "Tickets / More Info"
@@ -38,8 +38,8 @@ feature_row_a:
   - image_path: /assets/concert_images/candlelight.jpg
     # alt: "Studio"
     title: |
-      Candlelight Concert:
-      Coldplay x Imagine Dragons  
+      Candlelight Concert:  
+      Coldplay x Imagine Dragons 
     excerpt: "Santa Fe"
     url: https://feverup.com/m/369545
     btn_label: "Tickets / More Info"

@@ -8,6 +8,7 @@ header:
   overlay_filter: "0.35" # 0–1 darkens image
   overlay_image: /assets/sandstone.jpg
 
+# Row A
 feature_row_a:
   - image_path: /assets/concert_images/violins_of_hope.jpg
     # alt: "Performances"
@@ -45,6 +46,16 @@ feature_row_a:
     btn_class: "btn--primary"
     badge_month: NOV          # ← manual
     badge_day: 22
+
+# Row B
+# feature_row_b:
+#   - image_path: "{{ '/assets/concert_images/candlelight.jpg' | relative_url }}"
+#     title: "Candlelight: Coldplay x Imagine Dragons"
+#     excerpt: "Santa Fe"
+#     url: https://example.com/c
+#     btn_label: "Tickets"
+#     btn_class: "btn--primary"
+#     badge_date: 2025-12-12
 ---
 
 # Upcoming Concerts
@@ -65,23 +76,23 @@ function attachCalendarBadges(wrapperSelector, dates, urls) {
     const d = dates[i];
     if (!d || !d.month || !d.day) return;
 
-    const cs = window.getComputedStyle(teaser);
-    if (cs.position === 'static') teaser.style.position = 'relative';
+    // Anchor badge to image container
+    if (getComputedStyle(teaser).position === 'static') {
+      teaser.style.position = 'relative';
+    }
+
+    const linkUrl = urls && urls[i];
+    const wrapper = linkUrl ? document.createElement('a') : document.createElement('span');
+    if (linkUrl) { wrapper.href = linkUrl; wrapper.style.textDecoration = 'none'; }
 
     const badge = document.createElement('span');
     badge.setAttribute('aria-label', 'Event date');
 
-    const wrapper = urls && urls[i] ? document.createElement('a') : document.createElement('span');
-    if (urls && urls[i]) {
-      wrapper.href = urls[i];
-      wrapper.style.textDecoration = 'none';
-    }
-
-    // Inline styles so it always overlays
+    // Inline styles (ensures overlay even if site CSS differs)
     const b = badge.style;
     b.position = 'absolute';
-    b.top = '5px';           // tweak to '0' for flush top
-    b.right = '5px';
+    b.top = '0';            // ← top-right
+    b.right = '0';
     b.width = '58px';
     b.height = '64px';
     b.borderRadius = '10px';
@@ -118,7 +129,7 @@ function attachCalendarBadges(wrapperSelector, dates, urls) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Build dates/urls for Row A from front matter
+  // Build data for Row A
   const datesA = [
     {% for f in page.feature_row_a %}
       {% if f.badge_date %}
@@ -134,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
   ];
   attachCalendarBadges('#row-a', datesA, urlsA);
 
-  // Build dates/urls for Row B
+  // Build data for Row B
   const datesB = [
     {% for f in page.feature_row_b %}
       {% if f.badge_date %}
@@ -150,7 +161,10 @@ document.addEventListener('DOMContentLoaded', function () {
   ];
   attachCalendarBadges('#row-b', datesB, urlsB);
 
-  // Repeat for more rows: build arrays and call attachCalendarBadges('#row-c', datesC, urlsC)
+  // Add more rows by repeating the pattern:
+  // const datesC = [ ...from page.feature_row_c... ];
+  // const urlsC =  [ ...from page.feature_row_c... ];
+  // attachCalendarBadges('#row-c', datesC, urlsC);
 });
 </script>
 

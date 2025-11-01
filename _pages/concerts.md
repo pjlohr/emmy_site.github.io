@@ -64,8 +64,7 @@ feature_row_a:
   {% include feature_row feature_row=page.feature_row_a %}
 </div> -->
 
-{% include feature_row feature_row=page.feature_row_a %}
-
+{% include feature_row id="feature_row_a" %}
 <!-- ## Past / Other Programs
 <div id="row-b" style="margin-top: 2rem;">
   {% include feature_row feature_row=page.feature_row_b %}

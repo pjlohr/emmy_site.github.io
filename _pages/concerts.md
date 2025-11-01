@@ -71,33 +71,53 @@ feature_row_a:
 
 <script>
 function attachCalendarBadges(wrapperSelector, dates, urls) {
-  const teasers = document.querySelectorAll(wrapperSelector + ' .feature__item .archive__item-teaser');
+  const INSET = 0; // change to 5 for a small inset from the edge
+
+  const teasers = document.querySelectorAll(
+    wrapperSelector + ' .feature__item .archive__item-teaser'
+  );
+
+  function placeBadge(teaser, img, wrapper, badge) {
+    // Ensure the teaser is the positioning context
+    if (getComputedStyle(teaser).position === 'static') teaser.style.position = 'relative';
+
+    // Temporarily show badge to get its size
+    badge.style.visibility = 'hidden';
+    teaser.appendChild(wrapper); // append first so we can measure
+    const badgeRect = badge.getBoundingClientRect();
+
+    // Measure image and teaser boxes
+    const tRect = teaser.getBoundingClientRect();
+    const iRect = img.getBoundingClientRect();
+
+    // Compute top-right of the *image* relative to teaser
+    const top = (iRect.top - tRect.top) + INSET;
+    const left = (iRect.right - tRect.left) - badgeRect.width - INSET;
+
+    // Pin there
+    badge.style.position = 'absolute';
+    badge.style.top = top + 'px';
+    badge.style.left = left + 'px';
+    badge.style.visibility = 'visible';
+    badge.style.zIndex = '50';
+  }
 
   teasers.forEach(function (teaser, i) {
     const d = dates[i];
     if (!d || !d.month || !d.day) return;
 
-    // Find the real image container (anchor for absolute positioning)
-    const imgParent = teaser.querySelector('img')?.parentElement || teaser;
-    if (getComputedStyle(imgParent).position === 'static') {
-      imgParent.style.position = 'relative';
-    }
+    const img = teaser.querySelector('img');
+    if (!img) return;
 
     const linkUrl = urls && urls[i];
     const wrapper = linkUrl ? document.createElement('a') : document.createElement('span');
-    if (linkUrl) {
-      wrapper.href = linkUrl;
-      wrapper.style.textDecoration = 'none';
-    }
+    if (linkUrl) { wrapper.href = linkUrl; wrapper.style.textDecoration = 'none'; }
 
     const badge = document.createElement('span');
     badge.setAttribute('aria-label', 'Event date');
 
-    // Inline styles — pins badge to top-right corner of the image container
+    // Badge visual styles (card look)
     const b = badge.style;
-    b.position = 'absolute';
-    b.top = '0';       // exact top
-    b.right = '0';     // exact right
     b.width = '58px';
     b.height = '64px';
     b.borderRadius = '10px';
@@ -107,36 +127,22 @@ function attachCalendarBadges(wrapperSelector, dates, urls) {
     b.alignItems = 'center';
     b.justifyContent = 'stretch';
     b.boxShadow = '0 2px 6px rgba(0,0,0,.28)';
-    b.zIndex = '30';
     b.border = '1px solid rgba(255,255,255,.35)';
+    b.background = 'transparent';
 
     const header = document.createElement('span');
     Object.assign(header.style, {
-      background: '#e63946',
-      color: '#fff',
-      fontWeight: '700',
-      fontSize: '12px',
-      letterSpacing: '0.5px',
-      textTransform: 'uppercase',
-      lineHeight: '1',
-      padding: '6px 0',
-      width: '100%',
-      textAlign: 'center'
+      background: '#e63946', color: '#fff', fontWeight: '700',
+      fontSize: '12px', letterSpacing: '0.5px', textTransform: 'uppercase',
+      lineHeight: '1', padding: '6px 0', width: '100%', textAlign: 'center'
     });
     header.textContent = d.month;
 
     const day = document.createElement('span');
     Object.assign(day.style, {
-      background: '#fff',
-      color: '#111',
-      fontWeight: '800',
-      fontSize: '22px',
-      lineHeight: '1',
-      flex: '1 1 auto',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      width: '100%'
+      background: '#fff', color: '#111', fontWeight: '800',
+      fontSize: '22px', lineHeight: '1', flex: '1 1 auto', display: 'flex',
+      alignItems: 'center', justifyContent: 'center', width: '100%'
     });
     day.textContent = d.day;
 
@@ -144,8 +150,20 @@ function attachCalendarBadges(wrapperSelector, dates, urls) {
     badge.appendChild(day);
     wrapper.appendChild(badge);
 
-    // ✅ append to image parent (not teaser) so badge sticks to top-right of image
-    imgParent.appendChild(wrapper);
+    // Place now (if image is already loaded), else after load
+    const tryPlace = () => {
+      // Use rAF so layout is up-to-date
+      requestAnimationFrame(() => placeBadge(teaser, img, wrapper, badge));
+    };
+
+    if (img.complete && img.naturalWidth) {
+      tryPlace();
+    } else {
+      img.addEventListener('load', tryPlace, { once: true });
+    }
+
+    // Reposition on resize (layout changes)
+    window.addEventListener('resize', tryPlace);
   });
 }
 
@@ -164,9 +182,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const urlsA = [
     {% for f in page.feature_row_a %} {{ f.url | jsonify }}, {% endfor %}
   ];
+
   attachCalendarBadges('#row-a', datesA, urlsA);
 
-  // To enable more rows, duplicate and adjust for #row-b, #row-c, etc.
+  // Repeat for other rows as needed:
+  // attachCalendarBadges('#row-b', datesB, urlsB);
 });
 </script>
 

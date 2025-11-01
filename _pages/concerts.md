@@ -140,7 +140,7 @@ function attachCalendarBadges(wrapperSelector, dates, urls) {
     const header = document.createElement('span');
     Object.assign(header.style, {
       background: '#e63946', color: '#fff', fontWeight: '700',
-      fontSize: '12px', letterSpacing: '0.5px', textTransform: 'uppercase',
+      fontSize: '16px', letterSpacing: '0.5px', textTransform: 'uppercase',
       lineHeight: '1', padding: '6px 0', width: '100%', textAlign: 'center'
     });
     header.textContent = d.month;
@@ -148,7 +148,7 @@ function attachCalendarBadges(wrapperSelector, dates, urls) {
     const day = document.createElement('span');
     Object.assign(day.style, {
       background: '#fff', color: '#111', fontWeight: '800',
-      fontSize: '22px', lineHeight: '1', flex: '1 1 auto', display: 'flex',
+      fontSize: '28px', lineHeight: '1', flex: '1 1 auto', display: 'flex',
       alignItems: 'center', justifyContent: 'center', width: '100%'
     });
     day.textContent = d.day;

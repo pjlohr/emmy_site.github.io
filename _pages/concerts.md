@@ -60,6 +60,7 @@ feature_row_b:
           Emmy Tisdel Lohr, violin 
     url: https://emmy-tisdel.com/concerts/
     btn_label: "Tickets / More Info"
+    btn_class: "btn--primary"
     badge_month: DEC        
     badge_day: 8
 
@@ -88,7 +89,7 @@ feature_row_b:
     url: https://emmy-tisdel.com/concerts/
     btn_label: "Tickets / More Info"
     btn_class: "btn--primary"
-    badge_month: FEB          # ← manual
+    badge_month: FEB         
     badge_day: 10
 ---
 

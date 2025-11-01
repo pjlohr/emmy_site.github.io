@@ -60,9 +60,11 @@ feature_row_a:
 
 # Upcoming Concerts
 
-<div id="row-a">
+<!-- <div id="row-a">
   {% include feature_row feature_row=page.feature_row_a %}
-</div>
+</div> -->
+
+{% include feature_row feature_row=page.feature_row_a %}
 
 <!-- ## Past / Other Programs
 <div id="row-b" style="margin-top: 2rem;">

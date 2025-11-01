@@ -92,7 +92,7 @@ function attachCalendarBadges(wrapperSelector, dates, urls) {
     // Inline styles (ensures overlay even if site CSS differs)
     const b = badge.style;
     b.position = 'absolute';
-    b.top = '-25px';            // ← top-right
+    b.top = '-44px';            // ← top-right
     b.right = '5px';
     // b.width = '58px';
     // b.height = '64px';

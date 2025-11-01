@@ -22,7 +22,6 @@ feature_row1:
     btn_class: "btn--primary"
     badge_date: 2025-11-03   # ← ISO date (auto-formats to NOV / 3)
 
-
   - image_path: /assets/concert_images/candlelight.jpg
     # alt: "Media"
     title: "Candlelight Concert"
@@ -104,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Badge container styles (calendar card)
     const b = badge.style;
     b.position = 'absolute';
-    b.top = '0';
+    b.top = '5px';
     b.right = '5px';
     b.width = '58px';
     b.height = '64px';

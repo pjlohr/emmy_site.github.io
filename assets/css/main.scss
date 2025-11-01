@@ -39,56 +39,55 @@ search: false
   max-width: 700px;   /* optional: keep line length readable */
 }
 
+/* Calendar badge that overlays the teaser image in each feature tile */
+.feature__item .archive__item-teaser { position: relative; }
 
-// /* Calendar badge that overlays the teaser image in each feature tile */
-// .feature__item .archive__item-teaser { position: relative; }
+.mm-calendar-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 58px;
+  height: 64px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  box-shadow: 0 2px 6px rgba(0,0,0,.28);
+  z-index: 3;
+  border: 1px solid rgba(255,255,255,.35); /* helps on dark images */
+}
 
-// .mm-calendar-badge {
-//   position: absolute;
-//   top: 10px;
-//   right: 10px;
-//   width: 58px;
-//   height: 64px;
-//   border-radius: 10px;
-//   overflow: hidden;
-//   display: inline-flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: stretch;
-//   box-shadow: 0 2px 6px rgba(0,0,0,.28);
-//   z-index: 3;
-//   border: 1px solid rgba(255,255,255,.35); /* helps on dark images */
-// }
+/* Red header with month */
+.mm-cal-header {
+  background: #e63946;     /* tweak to match your brand */
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 6px 0 6px;
+  text-align: center;
+}
 
-// /* Red header with month */
-// .mm-cal-header {
-//   background: #e63946;     /* tweak to match your brand */
-//   color: #fff;
-//   font-weight: 700;
-//   font-size: 12px;
-//   letter-spacing: .5px;
-//   text-transform: uppercase;
-//   line-height: 1;
-//   padding: 6px 0 6px;
-//   text-align: center;
-// }
+/* White body with day number */
+.mm-cal-day {
+  background: #fff;
+  color: #111;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 1;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-// /* White body with day number */
-// .mm-cal-day {
-//   background: #fff;
-//   color: #111;
-//   font-weight: 800;
-//   font-size: 22px;
-//   line-height: 1;
-//   flex: 1 1 auto;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-
-// /* Smaller badge on narrow screens */
-// @media (max-width: 480px) {
-//   .mm-calendar-badge { width: 50px; height: 58px; }
-//   .mm-cal-header { font-size: 11px; padding: 5px 0; }
-//   .mm-cal-day { font-size: 20px; }
-// }
+/* Smaller badge on narrow screens */
+@media (max-width: 480px) {
+  .mm-calendar-badge { width: 50px; height: 58px; }
+  .mm-cal-header { font-size: 11px; padding: 5px 0; }
+  .mm-cal-day { font-size: 20px; }
+}

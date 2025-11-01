@@ -145,21 +145,21 @@ document.addEventListener('DOMContentLoaded', function () {
   ];
   attachCalendarBadges('#row-a', datesA, urlsA);
 
-  // Build data for Row B
-  const datesB = [
-    {% for f in page.feature_row_b %}
-      {% if f.badge_date %}
-        { month: "{{ f.badge_date | date: '%b' | upcase }}", day: "{{ f.badge_date | date: '%-d' }}" },
-      {% elsif f.badge_month or f.badge_day %}
-        { month: "{{ f.badge_month }}", day: "{{ f.badge_day }}" },
-      {% else %} null,
-      {% endif %}
-    {% endfor %}
-  ];
-  const urlsB = [
-    {% for f in page.feature_row_b %} {{ f.url | jsonify }}, {% endfor %}
-  ];
-  attachCalendarBadges('#row-b', datesB, urlsB);
+  // // Build data for Row B
+  // const datesB = [
+  //   {% for f in page.feature_row_b %}
+  //     {% if f.badge_date %}
+  //       { month: "{{ f.badge_date | date: '%b' | upcase }}", day: "{{ f.badge_date | date: '%-d' }}" },
+  //     {% elsif f.badge_month or f.badge_day %}
+  //       { month: "{{ f.badge_month }}", day: "{{ f.badge_day }}" },
+  //     {% else %} null,
+  //     {% endif %}
+  //   {% endfor %}
+  // ];
+  // const urlsB = [
+  //   {% for f in page.feature_row_b %} {{ f.url | jsonify }}, {% endfor %}
+  // ];
+  // attachCalendarBadges('#row-b', datesB, urlsB);
 
   // Add more rows by repeating the pattern:
   // const datesC = [ ...from page.feature_row_c... ];

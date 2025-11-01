@@ -69,8 +69,194 @@ feature_row_a:
   {% include feature_row id="feature_row_b" %}
 </div> -->
 
-
 <script>
+/** Percent-scaled calendar badge pinned to the image's true top-right */
+function attachCalendarBadges(wrapperSelector, dates, urls) {
+  // % knobs (tweak for taste)
+  const INSET_X = 0.02;     // 2% of image width from the right
+  const INSET_Y = 0.02;     // 2% of image height from the top
+  const BADGE_W_FRAC = 0.18;   // badge width = 18% of image width
+  const BADGE_MIN_W = 46;      // px clamp
+  const BADGE_MAX_W = 88;      // px clamp
+  const BADGE_ASPECT = 64 / 58; // height/width
+
+  const teasers = document.querySelectorAll(
+    wrapperSelector + ' .feature__item .archive__item-teaser'
+  );
+
+  function placeBadge(teaser, img, wrapper, badge) {
+    if (getComputedStyle(teaser).position === 'static') teaser.style.position = 'relative';
+
+    // Attach (hidden) to measure
+    badge.style.visibility = 'hidden';
+    teaser.appendChild(wrapper);
+
+    const tRect = teaser.getBoundingClientRect();
+    const iRect = img.getBoundingClientRect();
+    const imgW = iRect.width;
+    const imgH = iRect.height;
+
+    // Size from image
+    const badgeW = Math.max(BADGE_MIN_W, Math.min(BADGE_MAX_W, imgW * BADGE_W_FRAC));
+    const badgeH = badgeW * BADGE_ASPECT;
+    badge.style.width = badgeW + 'px';
+    badge.style.height = badgeH + 'px';
+
+    // Inset from image corner
+    const insetX = imgW * INSET_X;
+    const insetY = imgH * INSET_Y;
+
+    // Top-right of image relative to teaser
+    const top  = (iRect.top  - tRect.top) + insetY;
+    const left = (iRect.right - tRect.left) - insetX - badgeW;
+
+    Object.assign(badge.style, {
+      position: 'absolute',
+      top: top + 'px',
+      left: left + 'px',
+      visibility: 'visible',
+      zIndex: 50
+    });
+  }
+
+  teasers.forEach(function (teaser, i) {
+    const d = dates[i];
+    if (!d || !d.month || !d.day) return;
+
+    const img = teaser.querySelector('img');
+    if (!img) return;
+
+    const linkUrl = urls && urls[i];
+    const wrapper = linkUrl ? document.createElement('a') : document.createElement('span');
+    if (linkUrl) { wrapper.href = linkUrl; wrapper.style.textDecoration = 'none'; }
+
+    // Build badge
+    const badge = document.createElement('span');
+    badge.setAttribute('aria-label', 'Event date');
+    Object.assign(badge.style, {
+      borderRadius: '10px',
+      overflow: 'hidden',
+      display: 'inline-flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'stretch',
+      boxShadow: '0 2px 6px rgba(0,0,0,.28)',
+      border: '1px solid rgba(255,255,255,.35)',
+      background: 'transparent'
+    });
+
+    const header = document.createElement('span');
+    Object.assign(header.style, {
+      background: '#e63946', color: '#fff', fontWeight: '700',
+      fontSize: '12px', letterSpacing: '0.5px', textTransform: 'uppercase',
+      lineHeight: '1', padding: '6px 0', width: '100%', textAlign: 'center'
+    });
+    header.textContent = d.month;
+
+    const day = document.createElement('span');
+    Object.assign(day.style, {
+      background: '#fff', color: '#111', fontWeight: '800',
+      fontSize: '22px', lineHeight: '1', flex: '1 1 auto', display: 'flex',
+      alignItems: 'center', justifyContent: 'center', width: '100%'
+    });
+    day.textContent = d.day;
+
+    badge.appendChild(header);
+    badge.appendChild(day);
+    wrapper.appendChild(badge);
+
+    const tryPlace = () => requestAnimationFrame(() => placeBadge(teaser, img, wrapper, badge));
+    if (img.complete && img.naturalWidth) tryPlace();
+    else img.addEventListener('load', tryPlace, { once: true });
+
+    window.addEventListener('resize', tryPlace);
+  });
+}
+
+/* ---- Auto-detect rows present in front matter and attach ---- */
+document.addEventListener('DOMContentLoaded', function () {
+  // Helper to attach for one row (suffix like 'a','b','c')
+  function bindRow(suffix, selector) {
+    // Build dates/urls arrays from Liquid only if the row exists
+    {% if page.feature_row_a %} if (suffix === 'a') {
+      const dates = [
+        {% for f in page.feature_row_a %}
+          {% if f.badge_date %}
+            { month: "{{ f.badge_date | date: '%b' | upcase }}", day: "{{ f.badge_date | date: '%-d' }}" },
+          {% elsif f.badge_month or f.badge_day %}
+            { month: "{{ f.badge_month }}", day: "{{ f.badge_day }}" },
+          {% else %} null,
+          {% endif %}
+        {% endfor %}
+      ];
+      const urls  = [{% for f in page.feature_row_a %} {{ f.url | jsonify }}, {% endfor %}];
+      attachCalendarBadges(selector, dates, urls);
+    } {% endif %}
+
+    {% if page.feature_row_b %} if (suffix === 'b') {
+      const dates = [
+        {% for f in page.feature_row_b %}
+          {% if f.badge_date %}
+            { month: "{{ f.badge_date | date: '%b' | upcase }}", day: "{{ f.badge_date | date: '%-d' }}" },
+          {% elsif f.badge_month or f.badge_day %}
+            { month: "{{ f.badge_month }}", day: "{{ f.badge_day }}" },
+          {% else %} null,
+          {% endif %}
+        {% endfor %}
+      ];
+      const urls  = [{% for f in page.feature_row_b %} {{ f.url | jsonify }}, {% endfor %}];
+      attachCalendarBadges(selector, dates, urls);
+    } {% endif %}
+
+    {% if page.feature_row_c %} if (suffix === 'c') {
+      const dates = [
+        {% for f in page.feature_row_c %}
+          {% if f.badge_date %}
+            { month: "{{ f.badge_date | date: '%b' | upcase }}", day: "{{ f.badge_date | date: '%-d' }}" },
+          {% elsif f.badge_month or f.badge_day %}
+            { month: "{{ f.badge_month }}", day: "{{ f.badge_day }}" },
+          {% else %} null,
+          {% endif %}
+        {% endfor %}
+      ];
+      const urls  = [{% for f in page.feature_row_c %} {{ f.url | jsonify }}, {% endfor %}];
+      attachCalendarBadges(selector, dates, urls);
+    } {% endif %}
+
+    {% if page.feature_row_d %} if (suffix === 'd') {
+      const dates = [
+        {% for f in page.feature_row_d %}
+          {% if f.badge_date %}
+            { month: "{{ f.badge_date | date: '%b' | upcase }}", day: "{{ f.badge_date | date: '%-d' }}" },
+          {% elsif f.badge_month or f.badge_day %}
+            { month: "{{ f.badge_month }}", day: "{{ f.badge_day }}" },
+          {% else %} null,
+          {% endif %}
+        {% endfor %}
+      ];
+      const urls  = [{% for f in page.feature_row_d %} {{ f.url | jsonify }}, {% endfor %}];
+      attachCalendarBadges(selector, dates, urls);
+    } {% endif %}
+  }
+
+  // Try rows a..d (add more if you need)
+  bindRow('a', '#row-a');
+  bindRow('b', '#row-b');
+  bindRow('c', '#row-c');
+  bindRow('d', '#row-d');
+});
+
+
+
+
+
+</script>
+
+
+
+
+
+<!-- <script>
 function attachCalendarBadges(wrapperSelector, dates, urls) {
   const teasers = document.querySelectorAll(wrapperSelector + ' .feature__item .archive__item-teaser');
   teasers.forEach(function (teaser, i) {
@@ -170,4 +356,4 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-
+ -->

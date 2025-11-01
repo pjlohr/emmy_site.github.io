@@ -49,42 +49,47 @@ feature_row_a:
 
 # Row B
 feature_row_b:
-  # - image_path: /assets/concert_images/violins_of_hope.jpg
-  #   # alt: "Performances"
-  #   title: "Violins of Hope with Jewish Museum Milwaukee"
-  #   excerpt: |
-  #         Works by Bloch, Shostakovich, Schoenfield, and others  
-  #         Stefanie Jacob, piano  
-  #         Scott Tisdel, cello  
-  #         Emmy Tisdel Lohr, violin 
-  #   url: https://jewishmuseummilwaukee.org/event/nashama/
-  #   btn_label: "Tickets / More Info"
-  #   btn_class: "btn--primary"
-  #   badge_date: 2025-11-04   # ← ISO date (auto-formats to NOV / 3)
+  - image_path: /assets/concert_images/wcm_recital_hall.png
+    # alt: "Performances"
+    title: "Prometheus Trio Concert (Milwaukee)"
+    excerpt: |
+          Martinu Piano Quartet
+          Dvorak “Dumky” Piano Trio  
+          Stefanie Jacob, piano  
+          Scott Tisdel, cello  
+          Emmy Tisdel Lohr, violin 
+    # url: https://jewishmuseummilwaukee.org/event/nashama/
+    btn_label: "Tickets / More Info"
+    badge_month: DEC        
+    badge_day: 8
 
-  # - image_path: /assets/concert_images/candlelight.jpg
-  #   # alt: "Media"
-  #   title: "Candlelight Concert"
-  #   excerpt: |
-  #     Rock Classics  
-  #     Santa Fe 
-  #   url: https://feverup.com/m/369543
-  #   btn_label: "Tickets / More Info"
-  #   btn_class: "btn--primary"
-  #   badge_month: NOV          # ← manual
-  #   badge_day: 22
+  - image_path: /assets/concert_images/wcm_recital_hall.png
+    # alt: "Media"
+    title: "Pro Musica Winter Orchestra Concert (Santa Fe)"
+    excerpt: |
+          Mozart Symphony No. 36  
+          Mozart Violin Concerto No. 5  
+          Mozart Piano Concerto No. 24  
+    url: https://tickets.sfpromusica.org/10605/10607?_gl=1*1m8y5bz*_ga*NzM0MTgwNTkyLjE3NjEyNTQ4OTA.*_ga_7PNM7QVG5Q*czE3NjEyNTQ4OTAkbzEkZzEkdDE3NjEyNTQ5MzYkajE0JGwwJGgw*_ga_15GGZ9BZ4L*czE3NjEyNTQ4OTAkbzEkZzEkdDE3NjEyNTQ5MzYkajE0JGwwJGgw
+    btn_label: "Tickets / More Info"
+    btn_class: "btn--primary"
+    badge_month: JAN       
+    badge_day: 25
 
-  # - image_path: /assets/concert_images/candlelight.jpg
-  #   # alt: "Studio"
-  #   title: "Candlelight Concert"
-  #   excerpt: |
-  #     Coldplay x Imagine Dragons  
-  #     Santa Fe 
-  #   url: https://feverup.com/m/369545
-  #   btn_label: "Tickets / More Info"
-  #   btn_class: "btn--primary"
-  #   badge_month: NOV          # ← manual
-  #   badge_day: 22
+  - image_path: /assets/concert_images/wcm_recital_hall.png
+    # alt: "Studio"
+    title: "Shorewood Chamber Orchestra (Milwaukee)"
+    excerpt: |
+          Beethoven Triple Concerto  
+          Karen Frink, conductor    
+          Stefanie Jacob, piano  
+          Scott Tisdel, cello  
+          Emmy Tisdel Lohr, violin 
+    # url: https://feverup.com/m/369545
+    btn_label: "Tickets / More Info"
+    btn_class: "btn--primary"
+    badge_month: FEB          # ← manual
+    badge_day: 10
 ---
 
 # Upcoming Concerts
@@ -93,11 +98,9 @@ feature_row_b:
   {% include feature_row id="feature_row_a" %}
 </div>
 
-<!-- ## Past / Other Programs
 <div id="row-b" style="margin-top: 2rem;">
   {% include feature_row id="feature_row_b" %}
 </div> -->
-
 
 <script>
 function attachCalendarBadges(wrapperSelector, dates, urls) {
@@ -177,21 +180,21 @@ document.addEventListener('DOMContentLoaded', function () {
   ];
   attachCalendarBadges('#row-a', datesA, urlsA);
 
-  // // Build data for Row B
-  // const datesB = [
-  //   {% for f in page.feature_row_b %}
-  //     {% if f.badge_date %}
-  //       { month: "{{ f.badge_date | date: '%b' | upcase }}", day: "{{ f.badge_date | date: '%-d' }}" },
-  //     {% elsif f.badge_month or f.badge_day %}
-  //       { month: "{{ f.badge_month }}", day: "{{ f.badge_day }}" },
-  //     {% else %} null,
-  //     {% endif %}
-  //   {% endfor %}
-  // ];
-  // const urlsB = [
-  //   {% for f in page.feature_row_b %} {{ f.url | jsonify }}, {% endfor %}
-  // ];
-  // attachCalendarBadges('#row-b', datesB, urlsB);
+  // Build data for Row B
+  const datesB = [
+    {% for f in page.feature_row_b %}
+      {% if f.badge_date %}
+        { month: "{{ f.badge_date | date: '%b' | upcase }}", day: "{{ f.badge_date | date: '%-d' }}" },
+      {% elsif f.badge_month or f.badge_day %}
+        { month: "{{ f.badge_month }}", day: "{{ f.badge_day }}" },
+      {% else %} null,
+      {% endif %}
+    {% endfor %}
+  ];
+  const urlsB = [
+    {% for f in page.feature_row_b %} {{ f.url | jsonify }}, {% endfor %}
+  ];
+  attachCalendarBadges('#row-b', datesB, urlsB);
 
   // Add more rows by repeating the pattern:
   // const datesC = [ ...from page.feature_row_c... ];

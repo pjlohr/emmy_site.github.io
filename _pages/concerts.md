@@ -69,7 +69,7 @@ feature_row_a:
   {% include feature_row feature_row=page.feature_row_b %}
 </div> -->
 
-<script>
+<!-- <script>
 function attachCalendarBadges(wrapperSelector, dates, urls) {
   const teasers = document.querySelectorAll(wrapperSelector + ' .feature__item .archive__item-teaser');
   teasers.forEach(function (teaser, i) {
@@ -166,7 +166,18 @@ document.addEventListener('DOMContentLoaded', function () {
   // const urlsC =  [ ...from page.feature_row_c... ];
   // attachCalendarBadges('#row-c', datesC, urlsC);
 });
-</script>
+</script> -->
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- <script>
 document.addEventListener('DOMContentLoaded', function () {

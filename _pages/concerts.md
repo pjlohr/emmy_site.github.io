@@ -8,7 +8,7 @@ header:
   overlay_filter: "0.35" # 0–1 darkens image
   overlay_image: /assets/sandstone.jpg
 
-feature_row_1:
+feature_row_a:
   - image_path: /assets/concert_images/violins_of_hope.jpg
     # alt: "Performances"
     title: "Violins of Hope with Jewish Museum Milwaukee"
@@ -48,16 +48,114 @@ feature_row_1:
 
 # Upcoming Concerts
 
-<!-- {% include feature_row %} -->
-<!-- <div id="concert-row-1">
-  {% include feature_row id="feature_row1" %}
-</div> -->
-
-<div id="concert-row-1">
-  {% include feature_row feature_row=page.feature_row_1 %}
+## Upcoming Concerts
+<div id="row-a">
+  {% include feature_row feature_row=page.feature_row_a %}
 </div>
 
+<!-- ## Past / Other Programs
+<div id="row-b" style="margin-top: 2rem;">
+  {% include feature_row feature_row=page.feature_row_b %}
+</div> -->
+
+
 <script>
+function attachCalendarBadges(wrapperSelector, dates, urls) {
+  const teasers = document.querySelectorAll(wrapperSelector + ' .feature__item .archive__item-teaser');
+  teasers.forEach(function (teaser, i) {
+    const d = dates[i];
+    if (!d || !d.month || !d.day) return;
+
+    const cs = window.getComputedStyle(teaser);
+    if (cs.position === 'static') teaser.style.position = 'relative';
+
+    const badge = document.createElement('span');
+    badge.setAttribute('aria-label', 'Event date');
+
+    const wrapper = urls && urls[i] ? document.createElement('a') : document.createElement('span');
+    if (urls && urls[i]) {
+      wrapper.href = urls[i];
+      wrapper.style.textDecoration = 'none';
+    }
+
+    // Inline styles so it always overlays
+    const b = badge.style;
+    b.position = 'absolute';
+    b.top = '5px';           // tweak to '0' for flush top
+    b.right = '5px';
+    b.width = '58px';
+    b.height = '64px';
+    b.borderRadius = '10px';
+    b.overflow = 'hidden';
+    b.display = 'inline-flex';
+    b.flexDirection = 'column';
+    b.alignItems = 'center';
+    b.justifyContent = 'stretch';
+    b.boxShadow = '0 2px 6px rgba(0,0,0,.28)';
+    b.zIndex = '30';
+    b.border = '1px solid rgba(255,255,255,.35)';
+
+    const header = document.createElement('span');
+    Object.assign(header.style, {
+      background: '#e63946', color: '#fff', fontWeight: '700',
+      fontSize: '12px', letterSpacing: '0.5px', textTransform: 'uppercase',
+      lineHeight: '1', padding: '6px 0', width: '100%', textAlign: 'center'
+    });
+    header.textContent = d.month;
+
+    const day = document.createElement('span');
+    Object.assign(day.style, {
+      background: '#fff', color: '#111', fontWeight: '800',
+      fontSize: '22px', lineHeight: '1', flex: '1 1 auto', display: 'flex',
+      alignItems: 'center', justifyContent: 'center', width: '100%'
+    });
+    day.textContent = d.day;
+
+    badge.appendChild(header);
+    badge.appendChild(day);
+    wrapper.appendChild(badge);
+    teaser.appendChild(wrapper);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Build dates/urls for Row A from front matter
+  const datesA = [
+    {% for f in page.feature_row_a %}
+      {% if f.badge_date %}
+        { month: "{{ f.badge_date | date: '%b' | upcase }}", day: "{{ f.badge_date | date: '%-d' }}" },
+      {% elsif f.badge_month or f.badge_day %}
+        { month: "{{ f.badge_month }}", day: "{{ f.badge_day }}" },
+      {% else %} null,
+      {% endif %}
+    {% endfor %}
+  ];
+  const urlsA = [
+    {% for f in page.feature_row_a %} {{ f.url | jsonify }}, {% endfor %}
+  ];
+  attachCalendarBadges('#row-a', datesA, urlsA);
+
+  // Build dates/urls for Row B
+  const datesB = [
+    {% for f in page.feature_row_b %}
+      {% if f.badge_date %}
+        { month: "{{ f.badge_date | date: '%b' | upcase }}", day: "{{ f.badge_date | date: '%-d' }}" },
+      {% elsif f.badge_month or f.badge_day %}
+        { month: "{{ f.badge_month }}", day: "{{ f.badge_day }}" },
+      {% else %} null,
+      {% endif %}
+    {% endfor %}
+  ];
+  const urlsB = [
+    {% for f in page.feature_row_b %} {{ f.url | jsonify }}, {% endfor %}
+  ];
+  attachCalendarBadges('#row-b', datesB, urlsB);
+
+  // Repeat for more rows: build arrays and call attachCalendarBadges('#row-c', datesC, urlsC)
+});
+</script>
+
+<!-- <script>
 document.addEventListener('DOMContentLoaded', function () {
   // Build per-tile date data from front matter (Liquid → JS)
   const dates = [
@@ -159,4 +257,4 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
-
+ -->

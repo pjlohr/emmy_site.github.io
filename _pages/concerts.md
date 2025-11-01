@@ -8,7 +8,7 @@ header:
   overlay_filter: "0.35" # 0–1 darkens image
   overlay_image: /assets/sandstone.jpg
 
-feature_row1:
+feature_row_1:
   - image_path: /assets/concert_images/violins_of_hope.jpg
     # alt: "Performances"
     title: "Violins of Hope with Jewish Museum Milwaukee"
@@ -49,8 +49,12 @@ feature_row1:
 # Upcoming Concerts
 
 <!-- {% include feature_row %} -->
-<div id="concert-row">
+<!-- <div id="concert-row-1">
   {% include feature_row id="feature_row1" %}
+</div> -->
+
+<div id="concert-row-1">
+  {% include feature_row feature_row=page.feature_row_1 %}
 </div>
 
 <script>

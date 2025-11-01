@@ -20,7 +20,7 @@ feature_row_a:
     url: https://jewishmuseummilwaukee.org/event/nashama/
     btn_label: "Tickets / More Info"
     btn_class: "btn--primary"
-    badge_date: 2025-11-03   # ← ISO date (auto-formats to NOV / 3)
+    badge_date: 2025-11-04   # ← ISO date (auto-formats to NOV / 3)
 
   - image_path: /assets/concert_images/candlelight.jpg
     # alt: "Media"
@@ -31,8 +31,8 @@ feature_row_a:
     url: https://feverup.com/m/369543
     btn_label: "Tickets / More Info"
     btn_class: "btn--primary"
-    badge_month: OCT          # ← manual
-    badge_day: 31
+    badge_month: NOV          # ← manual
+    badge_day: 22
 
   - image_path: /assets/concert_images/candlelight.jpg
     # alt: "Studio"
@@ -43,12 +43,12 @@ feature_row_a:
     url: https://feverup.com/m/369545
     btn_label: "Tickets / More Info"
     btn_class: "btn--primary"
-    badge_date: 2025-12-12
+    badge_month: NOV          # ← manual
+    badge_day: 22
 ---
 
 # Upcoming Concerts
 
-## Upcoming Concerts
 <div id="row-a">
   {% include feature_row feature_row=page.feature_row_a %}
 </div>
@@ -57,7 +57,6 @@ feature_row_a:
 <div id="row-b" style="margin-top: 2rem;">
   {% include feature_row feature_row=page.feature_row_b %}
 </div> -->
-
 
 <script>
 function attachCalendarBadges(wrapperSelector, dates, urls) {

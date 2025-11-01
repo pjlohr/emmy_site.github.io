@@ -60,17 +60,17 @@ feature_row_a:
 
 # Upcoming Concerts
 
-<!-- <div id="row-a">
-  {% include feature_row feature_row=page.feature_row_a %}
-</div> -->
+## Upcoming Concerts
+<div id="row-a">
+  {% include feature_row id="feature_row_a" %}
+</div>
 
-{% include feature_row id="feature_row_a" %}
 <!-- ## Past / Other Programs
 <div id="row-b" style="margin-top: 2rem;">
-  {% include feature_row feature_row=page.feature_row_b %}
+  {% include feature_row id="feature_row_b" %}
 </div> -->
 
-<!-- <script>
+<script>
 function attachCalendarBadges(wrapperSelector, dates, urls) {
   const teasers = document.querySelectorAll(wrapperSelector + ' .feature__item .archive__item-teaser');
   teasers.forEach(function (teaser, i) {
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // const urlsC =  [ ...from page.feature_row_c... ];
   // attachCalendarBadges('#row-c', datesC, urlsC);
 });
-</script> -->
+</script>
 
 
 

@@ -58,7 +58,7 @@ feature_row_b:
           Stefanie Jacob, piano  
           Scott Tisdel, cello  
           Emmy Tisdel Lohr, violin 
-    # url: https://jewishmuseummilwaukee.org/event/nashama/
+    url: https://emmy-tisdel.com/concerts/
     btn_label: "Tickets / More Info"
     badge_month: DEC        
     badge_day: 8
@@ -85,7 +85,7 @@ feature_row_b:
           Stefanie Jacob, piano  
           Scott Tisdel, cello  
           Emmy Tisdel Lohr, violin 
-    # url: https://feverup.com/m/369545
+    url: https://emmy-tisdel.com/concerts/
     btn_label: "Tickets / More Info"
     btn_class: "btn--primary"
     badge_month: FEB          # ← manual
@@ -100,7 +100,7 @@ feature_row_b:
 
 <div id="row-b" style="margin-top: 2rem;">
   {% include feature_row id="feature_row_b" %}
-</div> -->
+</div>
 
 <script>
 function attachCalendarBadges(wrapperSelector, dates, urls) {

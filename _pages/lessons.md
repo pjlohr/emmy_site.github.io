@@ -11,7 +11,7 @@ header:
 
 # Private Lessons
 
-Welcome to my private studio! I am currently offering lessons for **both violin and viola, ages 10 and up**. 
+Welcome to my private studio! I am currently offering lessons for **both violin and viola, ages 9 and up**. 
 
 # Teaching Philosophy
 
